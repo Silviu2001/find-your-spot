@@ -64,7 +64,7 @@
         android:id="@+id/textView3"
         android:layout_width="85dp"
         android:layout_height="45dp"
-        android:text="Register"
+        android:text="Sign up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

@@ -1,12 +1,8 @@
-package com.example.login_mock;
-
-/**
- * Created by Shashank on 14-Feb-18.
- */
+package com.example.find_your_spot;
 
 import android.content.Context;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 
 public class SQLiteHelper extends SQLiteOpenHelper{
 

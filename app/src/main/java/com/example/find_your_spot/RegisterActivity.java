@@ -1,4 +1,4 @@
-package com.example.login_mock;
+package com.example.find_your_spot;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;

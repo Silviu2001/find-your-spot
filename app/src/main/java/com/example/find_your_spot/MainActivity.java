@@ -1,4 +1,4 @@
-package com.example.login_mock;
+package com.example.find_your_spot;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/widget" /><Constraint app:layout_editor_absoluteY="62dp" android:layout_height="207dp" app:layout_editor_absoluteX="127dp" android:layout_width="wrap_content" android:id="@+id/imageView4"/>
+        <Constraint
+            app:layout_editor_absoluteY="62dp"
+            android:layout_height="209dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/imageView3"
+            app:layout_editor_absoluteX="0dp" />
+        <Constraint
+            app:layout_editor_absoluteY="62dp"
+            android:layout_height="209dp"
+            app:layout_editor_absoluteX="257dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/imageView2" />
+        <Constraint
+            app:layout_editor_absoluteY="77dp"
+            app:layout_editor_absoluteX="257dp"
+            android:id="@+id/imageView" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@id/widget" />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start" />
+</MotionScene>

@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     String EmailHolder, PasswordHolder;
     Boolean EditTextEmptyHolder;
     SQLiteDatabase sqLiteDatabaseObj;
-    SQLiteHelper sqLiteHelper;
+    SQLiteHelperUsers sqLiteHelperUsers;
     Cursor cursor;
     String TempPassword = "NOT_FOUND" ;
     public static final String UserEmail = "";
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         Email = (EditText)findViewById(R.id.editEmail);
         Password = (EditText)findViewById(R.id.editPassword);
 
-        sqLiteHelper = new SQLiteHelper(this);
+        sqLiteHelperUsers = new SQLiteHelperUsers(this);
 
         //Adding click listener to log in button.
         LogInButton.setOnClickListener(new View.OnClickListener() {
@@ -75,10 +75,10 @@ public class MainActivity extends AppCompatActivity {
         if(EditTextEmptyHolder) {
 
             // Opening SQLite database write permission.
-            sqLiteDatabaseObj = sqLiteHelper.getWritableDatabase();
+            sqLiteDatabaseObj = sqLiteHelperUsers.getWritableDatabase();
 
             // Adding search email query to cursor.
-            cursor = sqLiteDatabaseObj.query(SQLiteHelper.TABLE_NAME, null, " " + SQLiteHelper.Table_Column_2_Email + "=?", new String[]{EmailHolder}, null, null, null);
+            cursor = sqLiteDatabaseObj.query(SQLiteHelperUsers.TABLE_NAME, null, " " + SQLiteHelperUsers.Table_Column_2_Email + "=?", new String[]{EmailHolder}, null, null, null);
 
             while (cursor.moveToNext()) {
 
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                     cursor.moveToFirst();
 
                     // Storing Password associated with entered email.
-                    TempPassword = cursor.getString(cursor.getColumnIndex(SQLiteHelper.Table_Column_3_Password));
+                    TempPassword = cursor.getString(cursor.getColumnIndex(SQLiteHelperUsers.Table_Column_3_Password));
 
                     // Closing cursor.
                     cursor.close();

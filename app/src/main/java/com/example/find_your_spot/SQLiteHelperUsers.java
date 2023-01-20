@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class SQLiteHelper extends SQLiteOpenHelper{
+public class SQLiteHelperUsers extends SQLiteOpenHelper{
 
     static String DATABASE_NAME="UserDataBase";
 
@@ -18,7 +18,7 @@ public class SQLiteHelper extends SQLiteOpenHelper{
 
     public static final String Table_Column_3_Password="password";
 
-    public SQLiteHelper(Context context) {
+    public SQLiteHelperUsers(Context context) {
 
         super(context, DATABASE_NAME, null, 1);
 

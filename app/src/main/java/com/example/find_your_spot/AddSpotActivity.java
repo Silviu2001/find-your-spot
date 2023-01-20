@@ -90,6 +90,7 @@ public class AddSpotActivity extends AppCompatActivity implements View.OnClickLi
             if (saveImageInDB()) {
                 Log.e(TAG, "Image Saved in Database...");
             }
+            finish();
         }
     }
 
@@ -101,7 +102,6 @@ public class AddSpotActivity extends AppCompatActivity implements View.OnClickLi
             byte[] inputData = Utils.getBytes(iStream);
             SQLiteHelperPhotos.insertImage(inputData);
             SQLiteHelperPhotos.close();
-            finish();
             return true;
         } catch (IOException ioe) {
             Log.e(TAG, "<saveImageInDB> Error : " + ioe.getLocalizedMessage());

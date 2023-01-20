@@ -11,6 +11,8 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+
+        <item name="android:textColorHint">@color/secondary_text</item>
         <!-- Customize your theme here. -->
     </style>
 
@@ -22,4 +24,7 @@
     <style name="Theme.Find_your_spot.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Find_your_spot.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Button.White" parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">@android:color/white</item>
+    </style>
 </resources>
